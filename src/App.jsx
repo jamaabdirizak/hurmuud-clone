@@ -23,7 +23,7 @@ const App = () => {
       </Routes>
       <Anfac/>
       <Products/>
-      <BussinessProducts/>git-init
+      <BussinessProducts/>
       <MYSMS/>
       <Outlet/>
       <Footer/>
