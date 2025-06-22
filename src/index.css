@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+body{
+    scroll-behavior: smooth;
+}
+.bg img{
+    filter: blur(30%);
+    opacity: 880%;
+}
+.dark-nav{
+    background: #212ea0;
+    transition: 0.5s;
+}
