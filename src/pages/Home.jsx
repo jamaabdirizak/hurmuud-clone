@@ -1,6 +1,8 @@
 import React from 'react';
-import pic_kayd from '../assets/pic-kayd.avif';
 import { FaArrowRight } from 'react-icons/fa';
+import pic_kayd from '../assets/pic-kayd.avif';
+
+
 
 const Home = () => {
   return (
@@ -19,8 +21,14 @@ const Home = () => {
         </div>
         
 
+        
+
+
         </section>
+        
+
+      
   );
-}
+};
 
 export default Home;

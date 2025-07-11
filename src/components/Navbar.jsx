@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaBars, FaTimes, FaHeart, FaShoppingCart } from 'react-icons/fa'; // Import new icons
+import { FaBars, FaTimes, FaHeart, FaShoppingCart } from 'react-icons/fa'; 
 import { useState, useEffect } from 'react';
 import logo from '../assets/logo.png';
 
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false); // Renamed to isOpen (lowercase for consistency)
-    const [isSticky, setIsSticky] = useState(false); // Renamed to isSticky
+    const [isOpen, setIsOpen] = useState(false); 
+    const [isSticky, setIsSticky] = useState(false); 
 
-    const toggleMenu = () => { // Renamed to toggleMenu
+    const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
 
@@ -19,15 +19,14 @@ const Navbar = () => {
 
         window.addEventListener('scroll', handleScroll);
 
-        // Cleanup the event listener on component unmount
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []); // Empty dependency array means this runs once on mount
+    }, []); 
 
-    // Determine text/icon color based on sticky state
-    const textColorClass = isSticky ? 'text-black' : 'text-gray-800'; // Dark text normally, white when sticky
-    const iconColorClass = isSticky ? 'text-black' : 'text-gray-700'; // Slightly darker for icons normally
+    
+    const textColorClass = isSticky ? 'text-black' : 'text-gray-800'; 
+    const iconColorClass = isSticky ? 'text-black' : 'text-gray-700';
 
     return (
         <div className={`
@@ -36,11 +35,11 @@ const Navbar = () => {
         `}>
             {/* Logo */}
             <Link to='/' className="flex items-center">
-                <img src={logo} alt="logo" className='h-10 w-auto mr-2' /> {/* Adjust size as needed */}
+                <img src={logo} alt="logo" className='h-10 w-auto mr-2' /> 
                 
             </Link>
 
-            {/* Hamburger/Close Button (Mobile) */}
+            {/* Close Button (Mobile) */}
             <button
                 onClick={toggleMenu}
                 className={`md:hidden focus:outline-none p-2 rounded-md ${iconColorClass}`}
